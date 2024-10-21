@@ -98,26 +98,26 @@
     </nav>
 
     <div class="container" id="home">
-        <h1>Perpustakaan Universitas Gunadarma Depok</h1>
+        <h1>Perpustakaan Universitas Tarumanagara</h1>
         <p>Halo! Saya Angrewi Calma. NIM saya, 222201036.</p>
         <p>Ini adalah homepage perpustakaan pertama saya. Terima kasih sudah berkunjung ke blog saya. Di bawah ini adalah gambar dari gedung Perpustakaan UNTAR.</p>
         <img src="gambar-gedung-untar.jpg" alt="Gedung Perpustakaan UNTAR" style="width:100%; max-width:600px;">
         
         <div class="form-container">
             <h2>Formulir Anggota Perpustakaan</h2>
-            <form>
-                <input type="text" placeholder="Nama">
-                <input type="text" placeholder="NIM">
-                <input type="text" placeholder="Alamat">
-                <select>
-                    <option>Jenis Kelamin</option>
-                    <option>Laki-laki</option>
-                    <option>Perempuan</option>
+            <form action="#" method="post">
+                <input type="text" placeholder="Nama" required>
+                <input type="text" placeholder="NIM" required>
+                <input type="text" placeholder="Alamat" required>
+                <select required>
+                    <option value="">Jenis Kelamin</option>
+                    <option value="Laki-laki">Laki-laki</option>
+                    <option value="Perempuan">Perempuan</option>
                 </select>
-                <input type="email" placeholder="Email">
-                <input type="text" placeholder="Nomor HP">
-                <input type="text" placeholder="Tempat Lahir">
-                <input type="date" placeholder="Tanggal Lahir">
+                <input type="email" placeholder="Email" required>
+                <input type="text" placeholder="Nomor HP" required>
+                <input type="text" placeholder="Tempat Lahir" required>
+                <input type="date" placeholder="Tanggal Lahir" required>
                 <button type="submit">Submit</button>
             </form>
         </div>
@@ -140,43 +140,43 @@
 
         <div class="form-container">
             <h2>Formulir Pemesanan Buku</h2>
-            <form>
-                <input type="text" placeholder="Nama Lengkap">
-                <input type="text" placeholder="Nomor Anggota Perpustakaan">
-                <input type="email" placeholder="Email">
-                <input type="text" placeholder="Nomor Telepon">
-                <select>
-                    <option>Jenis Kelamin</option>
-                    <option>Laki-laki</option>
-                    <option>Perempuan</option>
+            <form action="#" method="post">
+                <input type="text" placeholder="Nama Lengkap" required>
+                <input type="text" placeholder="Nomor Anggota Perpustakaan" required>
+                <input type="email" placeholder="Email" required>
+                <input type="text" placeholder="Nomor Telepon" required>
+                <select required>
+                    <option value="">Jenis Kelamin</option>
+                    <option value="Laki-laki">Laki-laki</option>
+                    <option value="Perempuan">Perempuan</option>
                 </select>
-                <input type="text" placeholder="Judul Buku yang Dipesan">
-                <input type="text" placeholder="Penulis Buku">
-                <input type="text" placeholder="Nomor ISBN">
-                <input type="date" placeholder="Tanggal Pemesanan">
+                <input type="text" placeholder="Judul Buku yang Dipesan" required>
+                <input type="text" placeholder="Penulis Buku" required>
+                <input type="text" placeholder="Nomor ISBN" required>
+                <input type="date" placeholder="Tanggal Pemesanan" required>
                 <button type="submit">Daftar</button>
             </form>
         </div>
 
         <div class="form-container">
             <h2>Formulir Perpanjangan Peminjaman Buku</h2>
-            <form>
-                <input type="text" placeholder="Nama Lengkap">
-                <input type="text" placeholder="Nomor Anggota Perpustakaan">
-                <input type="email" placeholder="Email">
-                <input type="text" placeholder="Judul Buku">
-                <input type="text" placeholder="Penulis Buku">
-                <input type="text" placeholder="Nomor ISBN">
-                <input type="date" placeholder="Tanggal Peminjaman Buku">
-                <input type="date" placeholder="Tanggal Perpanjangan">
-                <input type="text" placeholder="Alasan Perpanjangan">
+            <form action="#" method="post">
+                <input type="text" placeholder="Nama Lengkap" required>
+                <input type="text" placeholder="Nomor Anggota Perpustakaan" required>
+                <input type="email" placeholder="Email" required>
+                <input type="text" placeholder="Judul Buku" required>
+                <input type="text" placeholder="Penulis Buku" required>
+                <input type="text" placeholder="Nomor ISBN" required>
+                <input type="date" placeholder="Tanggal Peminjaman Buku" required>
+                <input type="date" placeholder="Tanggal Perpanjangan" required>
+                <input type="text" placeholder="Alasan Perpanjangan" required>
                 <button type="submit">Submit</button>
             </form>
         </div>
 
         <div class="video-container">
             <h2>Video Perpustakaan</h2>
-            <iframe width="560" height="315" src="https://youtu.be/g9-Mb9u7_YI?si=XU6FaWfBMe-6Q_61" frameborder="0" allowfullscreen></iframe>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/g9-Mb9u7_YI" frameborder="0" allowfullscreen></iframe>
         </div>
 
         <div class="audio-container">
@@ -192,85 +192,4 @@
         <h1>Pengertian HTML dan CSS</h1>
         <p>HTML (HyperText Markup Language) adalah bahasa markup standar yang digunakan untuk membuat halaman web. HTML digunakan untuk menyusun dan menampilkan konten di web.</p>
         <p>CSS (Cascading Style Sheets) digunakan untuk mengatur tampilan dan tata letak elemen-elemen HTML di halaman web.</p>
-    </div>
-
-    <!-- Pameran Buku Section -->
-    <div class="container" id="pameran-buku">
-        <h1>Pameran Buku</h1>
-        <h2>Thinking, Fast and Slow</h2>
-        <img src="thinking-fast-and-slow.jpg" alt="Thinking, Fast and Slow">
-        <button>Detail</button>
-        <p>Penulis: Daniel Kahneman | Tahun Terbit: 2011 | Lokasi Terbit: New York, AS\nRingkasan: Buku ini membahas dua cara berpikir manusia, yaitu berpikir cepat (intuitif dan emosional) dan berpikir lambat (logis dan hati-hati). Kahneman menunjukkan bagaimana kedua cara berpikir ini dapat mempengaruhi keputusan dan perilaku manusia.')">Detail</button>
-    </div>
-
-    <!-- Book 2: Sapiens -->
-    <div>
-        <h2>Sapiens: A Brief History of Humankind</h2>
-        <img src="sapiens_brief_history_of_humankind.jpg" alt="Sapiens: A Brief History of Humankind">
-        <button onclick="alert('Penulis: Yuval Noah Harari\nTahun Terbit: 2014\nLokasi Terbit: London, Inggris\nRingkasan: Buku ini mengulas sejarah umat manusia, mulai dari zaman purba hingga era modern, membahas bagaimana Homo sapiens menjadi spesies dominan dan mempengaruhi dunia.')">Detail</button>
-    </div>
-
-    <!-- Book 3: The Power of Habit -->
-    <div>
-        <h2>The Power of Habit: Why We Do What We Do in Life and Business</h2>
-        <img src="the_power_of_habit.jpg" alt="The Power of Habit: Why We Do What We Do in Life and Business">
-        <button onclick="alert('Penulis: Charles Duhigg\nTahun Terbit: 2012\nLokasi Terbit: New York, AS\nRingkasan: Duhigg mengeksplorasi ilmu di balik kebiasaan dan bagaimana mengubah kebiasaan buruk menjadi baik, baik dalam kehidupan pribadi maupun bisnis.')">Detail</button>
-    </div>
-
-    <!-- Book 4: Educated -->
-    <div>
-        <h2>Educated</h2>
-        <img src="educated.jpg" alt="Educated">
-        <button onclick="alert('Penulis: Tara Westover\nTahun Terbit: 2018\nLokasi Terbit: New York, AS\nRingkasan: Memoar tentang seorang wanita yang tumbuh di keluarga Mormon konservatif tanpa pendidikan formal dan perjuangannya untuk belajar hingga mendapatkan gelar doktor dari Universitas Cambridge.')">Detail</button>
-    </div>
-
-    <!-- Book 5: Atomic Habits -->
-    <div>
-        <h2>Atomic Habits: An Easy & Proven Way to Build Good Habits & Break Bad Ones</h2>
-        <img src="atomic_habits.jpg" alt="Atomic Habits: An Easy & Proven Way to Build Good Habits & Break Bad Ones">
-        <button onclick="alert('Penulis: James Clear\nTahun Terbit: 2018\nLokasi Terbit: New York, AS\nRingkasan: Buku ini membahas cara efektif untuk membangun kebiasaan baik dan menghilangkan kebiasaan buruk melalui langkah-langkah kecil yang konsisten.')">Detail</button>
-    </div>
-
-    <!-- Book 6: Grit -->
-    <div>
-        <h2>Grit: The Power of Passion and Perseverance</h2>
-        <img src="grit.jpg" alt="Grit: The Power of Passion and Perseverance">
-        <button onclick="alert('Penulis: Angela Duckworth\nTahun Terbit: 2016\nLokasi Terbit: New York, AS\nRingkasan: Duckworth membahas pentingnya kegigihan (grit) dalam mencapai kesuksesan, lebih dari sekadar bakat atau kecerdasan.')">Detail</button>
-    </div>
-
-    <!-- Book 7: Becoming -->
-    <div>
-        <h2>Becoming</h2>
-        <img src="becoming.jpg" alt="Becoming">
-        <button onclick="alert('Penulis: Michelle Obama\nTahun Terbit: 2018\nLokasi Terbit: New York, AS\nRingkasan: Memoar mantan Ibu Negara AS ini mengisahkan perjalanan hidupnya dari masa kecil di Chicago hingga menjadi tokoh penting di dunia politik Amerika.')">Detail</button>
-    </div>
-
-    <!-- Book 8: The Subtle Art of Not Giving a F*ck -->
-    <div>
-        <h2>The Subtle Art of Not Giving a F*ck</h2>
-        <img src="the_subtle_art_of_not_giving_a_fuck.jpg" alt="The Subtle Art of Not Giving a F*ck">
-        <button onclick="alert('Penulis: Mark Manson\nTahun Terbit: 2016\nLokasi Terbit: New York, AS\nRingkasan: Buku ini menawarkan pandangan realistis tentang cara hidup, dengan menekankan pentingnya memilih hal-hal yang pantas diperhatikan dalam kehidupan untuk mencapai kebahagiaan dan kesuksesan.')">Detail</button>
-    </div>
-
-    <!-- Book 9: Man's Search for Meaning -->
-    <div>
-        <h2>Man's Search for Meaning</h2>
-        <img src="mans_search_for_meaning.jpg" alt="Man's Search for Meaning">
-        <button onclick="alert('Penulis: Viktor E. Frankl\nTahun Terbit: 1946\nLokasi Terbit: Vienna, Austria\nRingkasan: Frankl, seorang psikiater dan penyintas Holocaust, menjelaskan pentingnya menemukan makna hidup, bahkan dalam kondisi yang paling sulit, sebagai kunci kebahagiaan dan kesehatan mental.')">Detail</button>
-    </div>
-
-    <!-- Book 10: Quiet -->
-    <div>
-        <h2>Quiet: The Power of Introverts in a World That Can't Stop Talking</h2>
-        <img src="quiet.jpg" alt="Quiet: The Power of Introverts in a World That Can't Stop Talking">
-        <button onclick="alert('Penulis: Susan Cain\nTahun Terbit: 2012\nLokasi Terbit: New York, AS\nRingkasan: Buku ini membahas kekuatan dan kelebihan introvert dalam masyarakat yang sering kali lebih mengutamakan ekstrovert. Cain menekankan bahwa introvert memiliki kemampuan untuk memimpin dan berprestasi dalam cara mereka sendiri.')">Detail</button>
-    </div>
-
-</body>
-</html>
-        
-        <!-- Tambah buku lainnya dengan format yang sama -->
-    </div>
-
-</body>
-</html>
+    </
