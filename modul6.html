@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog Perpustakaan UNTAR</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="#">
+                <i class="fas fa-book-reader"></i>
+                <span>Perpustakaan UNTAR</span>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" 
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html"><i class="fas fa-home"></i> Beranda</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#html-css"><i class="fas fa-code"></i> HTML & CSS</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#form-anggota"><i class="fas fa-user-plus"></i> Daftar Anggota</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#bahan-buku"><i class="fas fa-table"></i> Katalog Buku</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#pemesanan-buku"><i class="fas fa-shopping-cart"></i> Pemesanan</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#perpanjangan-buku"><i class="fas fa-clock"></i> Perpanjangan</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            <i class="fas fa-book"></i> Modul
+                        </a>
+                        <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" href="modul4.html">Modul 4</a></li>
+                            <li><a class="dropdown-item" href="modul5.html">Modul 5</a></li>
+                            <li><a class="dropdown-item" href="modul6.html">Modul 6</a></li>
+                            <li><a class="dropdown-item" href="modul7.html">Modul 7</a></li>
+                            <li><a class="dropdown-item" href="modul8.html">Modul 8</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <section class="container mt-5 pt-5">
+        <div class="row">
+            <div class="col-md-6">
+                <h2 class="slide-title">Selamat Datang di Perpustakaan UNTAR</h2>
+                <div class="toggle-content">
+                    <p>Klik tombol di bawah untuk melihat informasi perpustakaan</p>
+                    <button id="toggleInfo" class="btn btn-primary">Tampilkan Info</button>
+                    <div id="libraryInfo" style="display: none;">
+                        <p>Jam Operasional: 08.00 - 16.00 WIB</p>
+                        <p>Lokasi: Gedung Utama Lantai 2</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-md-6">
+                <div class="fade-sections">
+                    <div class="announcement-box">
+                        <h3>Pengumuman Terbaru</h3>
+                        <div class="announcement" style="display: none;">
+                            <p>Perpustakaan tutup pada tanggal merah</p>
+                        </div>
+                        <button class="btn btn-info" id="showAnnouncement">Lihat Pengumuman</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row mt-4">
+            <div class="col-12">
+                <div class="slide-section">
+                    <h3>Koleksi Terbaru</h3>
+                    <div class="book-list" style="display: none;">
+                        <ul>
+                            <li>Pemrograman Web Dasar</li>
+                            <li>Database Management</li>
+                            <li>Artificial Intelligence</li>
+                        </ul>
+                    </div>
+                    <button class="btn btn-success" id="toggleBooks">Tampilkan Koleksi</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        $(document).ready(function() {
+            // Slide effect for title
+            $(".slide-title").hide().slideDown(1000);
+
+            // Toggle Library Info
+            $("#toggleInfo").click(function() {
+                $("#libraryInfo").slideToggle(500);
+                var btnText = $(this).text();
+                if(btnText === "Tampilkan Info") {
+                    $(this).text("Sembunyikan Info");
+                } else {
+                    $(this).text("Tampilkan Info");
+                }
+            });
+
+            // Toggle Announcement
+            $("#showAnnouncement").click(function() {
+                $(".announcement").fadeToggle(800);
+                var btnText = $(this).text();
+                if(btnText === "Lihat Pengumuman") {
+                    $(this).text("Sembunyikan Pengumuman");
+                } else {
+                    $(this).text("Lihat Pengumuman");
+                }
+            });
+
+            // Toggle Book List
+            $("#toggleBooks").click(function() {
+                $(".book-list").slideToggle("slow", "easeInOutQuart");
+                var btnText = $(this).text();
+                if(btnText === "Tampilkan Koleksi") {
+                    $(this).text("Sembunyikan Koleksi");
+                } else {
+                    $(this).text("Tampilkan Koleksi");
+                }
+            });
+
+            // Hover animation
+            $(".btn").hover(
+                function() {
+                    $(this).animate({ opacity: 0.8 }, 200);
+                },
+                function() {
+                    $(this).animate({ opacity: 1 }, 200);
+                }
+            );
+        });
+    </script>
+</body>
+</html> 
