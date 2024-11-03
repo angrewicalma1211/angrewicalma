@@ -4,237 +4,362 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Blog Perpustakaan UNTAR</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            background: linear-gradient(to bottom, lightblue, pink, #FFA07A);
-            margin: 0;
-            padding: 0;
-        }
-
-        nav {
-            background-color: #333;
-            overflow: hidden;
-            margin-bottom: 20px;
-        }
-
-        nav a {
-            float: left;
-            color: white;
-            text-align: center;
-            padding: 14px 16px;
-            text-decoration: none;
-        }
-
-        nav a:hover {
-            background-color: #ddd;
-            color: black;
-        }
-
-        section {
-            padding: 20px;
-        }
-
-        h1, h2, h3 {
-            color: darkblue;
-        }
-
-        p {
-            font-size: 18px;
-        }
-
-        table {
-            width: 100%;
-            background-color: lightgreen;
-            border-collapse: collapse;
-        }
-
-        th, td {
-            border: 1px solid black;
-            padding: 10px;
-            text-align: left;
-            text-transform: uppercase;
-        }
-
-        th {
-            background-color: #d9f9d9;
-        }
-
-        form input, form label {
-            display: block;
-            margin: 10px 0;
-        }
-
-        .submit-button, .daftar-button {
-            margin-top: 20px;
-        }
-
-        .video, .audio {
-            margin: 20px 0;
-        }
-
-        .video iframe, .audio iframe {
-            width: 100%;
-            height: 400px;
-        }
-    </style>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
-
-    <nav>
-        <a href="#home">Home</a>
-        <a href="#html-css">Pengertian HTML dan CSS</a>
-        <a href="#form-anggota">Formulir Anggota Perpustakaan</a>
-        <a href="#bahan-buku">Tabel Bahan Buku</a>
-        <a href="#pemesanan-buku">Formulir Pemesanan Buku</a>
-        <a href="#perpanjangan-buku">Formulir Perpanjangan Buku</a>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="#">
+                <i class="fas fa-book-reader"></i>
+                <span>Perpustakaan UNTAR</span>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" 
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#home"><i class="fas fa-home"></i> Beranda</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#html-css"><i class="fas fa-code"></i> HTML & CSS</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#form-anggota"><i class="fas fa-user-plus"></i> Daftar Anggota</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#bahan-buku"><i class="fas fa-table"></i> Katalog Buku</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#pemesanan-buku"><i class="fas fa-shopping-cart"></i> Pemesanan</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#perpanjangan-buku"><i class="fas fa-clock"></i> Perpanjangan</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            <i class="fas fa-book"></i> Modul
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" href="modul4.html">Modul 4</a></li>
+                            <li><a class="dropdown-item" href="modul5.html">Modul 5</a></li>
+                            <li><a class="dropdown-item" href="modul6.html">Modul 6</a></li>
+                            <li><a class="dropdown-item" href="modul7.html">Modul 7</a></li>
+                            <li><a class="dropdown-item" href="modul8.html">Modul 8</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
     </nav>
 
     <section id="home">
-        <h1>Perpustakaan Universitas Tarumanagara</h1>
-        <h2>Perkenalan</h2>
-        <p>Halo! Perkenalkan saya Angrewi Calma, NIM saya, 222201036. Ini adalah homepage perpustakaan pertama saya. Sebelumnya, saya berterima kasih dan juga mohon maaf mengenai website ini, karena saya baru belajar mengenai langkah-langkah membuat website. Berikut ialah website perpustakaan UNTAR.</p>
-        <p>Dibawah ini ialah gambar dari gedung Perpustakaan UNTAR:</p>
-        <img src="https://images.app.goo.gl/7Uc2yUG699J63AJB6" alt="Gedung Perpustakaan UNTAR" width="500">
-        <img src="https://images.app.goo.gl/KxHSmmpFbmQzSTLY8" alt="Gedung Perpustakaan UNTAR" width="500">
+        <div class="container">
+            <h1>Perpustakaan Universitas Tarumanagara</h1>
+            <h2>Perkenalan</h2>
+            <p>Halo! Perkenalkan saya Angrewi Calma, NIM saya, 222201036. Ini adalah homepage perpustakaan pertama saya. Sebelumnya, saya berterima kasih dan juga mohon maaf mengenai website ini, karena saya baru belajar mengenai langkah-langkah membuat website. Berikut ialah website perpustakaan UNTAR.</p>
+            <p>Dibawah ini ialah gambar dari gedung Perpustakaan UNTAR:</p>
+            <img src="file/perpus1.jpeg" alt="Gedung Perpustakaan UNTAR" width="500">
+            <img src="file/perpus2.jpeg" alt="Gedung Perpustakaan UNTAR" width="500">
 
-        <h3>Formulir Anggota Perpustakaan</h3>
-        <table>
-            <tr><th>Nama</th><td><input type="text"></td></tr>
-            <tr><th>NIM</th><td><input type="text"></td></tr>
-            <tr><th>Alamat</th><td><input type="text"></td></tr>
-            <tr><th>Jenis Kelamin</th><td><input type="text"></td></tr>
-            <tr><th>Email</th><td><input type="email"></td></tr>
-            <tr><th>Nomor HP</th><td><input type="text"></td></tr>
-            <tr><th>Tempat Lahir</th><td><input type="text"></td></tr>
-            <tr><th>Tanggal Lahir</th><td><input type="date"></td></tr>
-        </table>
-        <button class="submit-button">Submit</button>
+            <h3>Formulir Anggota Perpustakaan</h3>
+            <table>
+                <tr><th>Nama</th><td><input type="text"></td></tr>
+                <tr><th>NIM</th><td><input type="text"></td></tr>
+                <tr><th>Alamat</th><td><input type="text"></td></tr>
+                <tr><th>Jenis Kelamin</th><td><input type="text"></td></tr>
+                <tr><th>Email</th><td><input type="email"></td></tr>
+                <tr><th>Nomor HP</th><td><input type="text"></td></tr>
+                <tr><th>Tempat Lahir</th><td><input type="text"></td></tr>
+                <tr><th>Tanggal Lahir</th><td><input type="date"></td></tr>
+            </table>
+            <button class="submit-button">Submit</button>
 
-        <h3>Tabel Bahan Buku</h3>
-        <table>
-            <tr><th>Nomor</th><th>Judul Buku</th><th>Pengarang</th><th>Penerbit</th><th>Tahun Terbit</th><th>Jumlah Halaman</th><th>ISBN</th></tr>
-            <!-- Isi data buku -->
-        </table>
+            <h3>Tabel Bahan Buku</h3>
+            <div class="table-responsive">
+                <table class="table table-striped table-hover">
+                    <thead class="table-dark">
+                        <tr>
+                            <th scope="col">Nomor</th>
+                            <th scope="col">Judul Buku</th>
+                            <th scope="col">Pengarang</th>
+                            <th scope="col">Penerbit</th>
+                            <th scope="col">Tahun Terbit</th>
+                            <th scope="col">Jumlah Halaman</th>
+                            <th scope="col">ISBN</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>1</td>
+                            <td>Thinking, Fast and Slow</td>
+                            <td>Daniel Kahneman</td>
+                            <td>Farrar, Straus and Giroux</td>
+                            <td>2011</td>
+                            <td>499</td>
+                            <td>978-0374275631</td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td>Sapiens: A Brief History of Humankind</td>
+                            <td>Yuval Noah Harari</td>
+                            <td>Harper</td>
+                            <td>2014</td>
+                            <td>443</td>
+                            <td>978-0062316097</td>
+                        </tr>
+                        <!-- Tambahkan data buku lainnya sesuai kebutuhan -->
+                    </tbody>
+                </table>
+            </div>
 
-        <h3>Formulir Pemesanan Buku</h3>
-        <table>
-            <tr><th>Nama Lengkap</th><td><input type="text"></td></tr>
-            <tr><th>Nomor Anggota Perpustakaan</th><td><input type="text"></td></tr>
-            <tr><th>Email</th><td><input type="email"></td></tr>
-            <tr><th>Nomor Telepon</th><td><input type="text"></td></tr>
-            <tr><th>Judul Buku yang Dipesan</th><td><input type="text"></td></tr>
-            <tr><th>Penulis Buku</th><td><input type="text"></td></tr>
-            <tr><th>Nomor ISBN</th><td><input type="text"></td></tr>
-            <tr><th>Tanggal Pemesanan</th><td><input type="date"></td></tr>
-        </table>
-        <button class="daftar-button">Daftar</button>
+            <h3>Formulir Pemesanan Buku</h3>
+            <table>
+                <tr><th>Nama Lengkap</th><td><input type="text"></td></tr>
+                <tr><th>Nomor Anggota Perpustakaan</th><td><input type="text"></td></tr>
+                <tr><th>Email</th><td><input type="email"></td></tr>
+                <tr><th>Nomor Telepon</th><td><input type="text"></td></tr>
+                <tr><th>Judul Buku yang Dipesan</th><td><input type="text"></td></tr>
+                <tr><th>Penulis Buku</th><td><input type="text"></td></tr>
+                <tr><th>Nomor ISBN</th><td><input type="text"></td></tr>
+                <tr><th>Tanggal Pemesanan</th><td><input type="date"></td></tr>
+            </table>
+            <button class="daftar-button">Daftar</button>
 
-        <h3>Formulir Perpanjangan Peminjaman Buku</h3>
-        <table>
-            <tr><th>Nama Lengkap</th><td><input type="text"></td></tr>
-            <tr><th>Nomor Anggota Perpustakaan</th><td><input type="text"></td></tr>
-            <tr><th>Email</th><td><input type="email"></td></tr>
-            <tr><th>Judul Buku</th><td><input type="text"></td></tr>
-            <tr><th>Penulis Buku</th><td><input type="text"></td></tr>
-            <tr><th>Nomor ISBN</th><td><input type="text"></td></tr>
-            <tr><th>Tanggal Peminjaman Buku</th><td><input type="date"></td></tr>
-            <tr><th>Tanggal Perpanjang</th><td><input type="date"></td></tr>
-            <tr><th>Alasan Perpanjangan</th><td><input type="text"></td></tr>
-        </table>
-        <button class="submit-button">Submit</button>
+            <h3>Formulir Perpanjangan Peminjaman Buku</h3>
+            <table>
+                <tr><th>Nama Lengkap</th><td><input type="text"></td></tr>
+                <tr><th>Nomor Anggota Perpustakaan</th><td><input type="text"></td></tr>
+                <tr><th>Email</th><td><input type="email"></td></tr>
+                <tr><th>Judul Buku</th><td><input type="text"></td></tr>
+                <tr><th>Penulis Buku</th><td><input type="text"></td></tr>
+                <tr><th>Nomor ISBN</th><td><input type="text"></td></tr>
+                <tr><th>Tanggal Peminjaman Buku</th><td><input type="date"></td></tr>
+                <tr><th>Tanggal Perpanjang</th><td><input type="date"></td></tr>
+                <tr><th>Alasan Perpanjangan</th><td><input type="text"></td></tr>
+            </table>
+            <button class="submit-button">Submit</button>
 
-        <!-- Lampiran Video -->
-        <h3>Lampiran Video</h3>
-        <div class="video">
-            <iframe src="https://www.youtube.com/embed/g9-Mb9u7_YI?si=XU6FaWfBMe-6Q_61" frameborder="0" allowfullscreen></iframe>
-        </div>
+            <!-- Lampiran Video -->
+            <h3>Lampiran Video</h3>
+            <div class="video">
+                <iframe src="https://www.youtube.com/embed/g9-Mb9u7_YI?si=XU6FaWfBMe-6Q_61" frameborder="0" allowfullscreen></iframe>
+            </div>
 
-        <!-- Audio -->
-        <h3>Audio Voice On</h3>
-        <div class="audio">
-            <iframe src="https://music.apple.com/id/album/slipping-through-my-fingers/1713994749?i=1713994980" frameborder="0"></iframe>
+            <!-- Audio -->
+            <h3>Audio Voice On</h3>
+            <div class="audio">
+                <iframe style="border-radius:12px" 
+                        src="https://open.spotify.com/embed/track/5JGEAz15LkPoOtFHttDtVs?utm_source=generator" 
+                        width="100%" 
+                        height="152" 
+                        frameBorder="0" 
+                        allowfullscreen="" 
+                        allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" 
+                        loading="lazy">
+                </iframe>
+            </div>
         </div>
     </section>
 
     <section id="html-css">
-        <h2>Pengertian HTML dan CSS</h2>
-        <p>HTML (HyperText Markup Language) adalah bahasa markup standar yang digunakan untuk membuat halaman web. HTML digunakan untuk menyusun dan menampilkan konten di web, seperti teks, gambar, tabel, tautan, dan elemen-elemen lainnya. HTML menentukan struktur sebuah halaman web dengan menggunakan elemen-elemen yang disebut tags.</p>
-        <p>CSS (Cascading Style Sheets) adalah bahasa yang digunakan untuk mengatur tampilan dan tata letak elemen-elemen HTML di halaman web. CSS memungkinkan pemisahan antara struktur (HTML) dan desain, sehingga kode lebih mudah dipelihara dan dapat digunakan kembali di banyak halaman.</p>
+        <div class="container">
+            <h2>Pengertian HTML dan CSS</h2>
+            <p>HTML (HyperText Markup Language) adalah bahasa markup standar yang digunakan untuk membuat halaman web. HTML digunakan untuk menyusun dan menampilkan konten di web, seperti teks, gambar, tabel, tautan, dan elemen-elemen lainnya. HTML menentukan struktur sebuah halaman web dengan menggunakan elemen-elemen yang disebut tags.</p>
+            <p>CSS (Cascading Style Sheets) adalah bahasa yang digunakan untuk mengatur tampilan dan tata letak elemen-elemen HTML di halaman web. CSS memungkinkan pemisahan antara struktur (HTML) dan desain, sehingga kode lebih mudah dipelihara dan dapat digunakan kembali di banyak halaman.</p>
+        </div>
     </section>
-</div>
 
-    <!-- Pameran Buku Section -->
-    <div class="container" id="pameran-buku">
-        <h1>Pameran Buku</h1>
-        <h2>Thinking, Fast and Slow</h2>
-        <img src="thinking-fast-and-slow.jpg" alt="Thinking, Fast and Slow">
-        <button>Detail</button>
-        <p>Penulis: Daniel Kahneman | Tahun Terbit: 2011 | Lokasi Terbit: New York, AS\nRingkasan: Buku ini membahas dua cara berpikir manusia, yaitu berpikir cepat (intuitif dan emosional) dan berpikir lambat (logis dan hati-hati). Kahneman menunjukkan bagaimana kedua cara berpikir ini dapat mempengaruhi keputusan dan perilaku manusia.')">Detail</button>
-    </div>
+    <section id="pameran-buku">
+        <div class="container">
+            <h1>Pameran Buku</h1>
+            <div class="book-container">
+                <!-- Book 1 -->
+                <div class="book-card">
+                    <h2>Thinking, Fast and Slow</h2>
+                    <img src="file/buku1.jpeg" alt="Thinking, Fast and Slow">
+                    <button onclick="showBookDetails('Thinking, Fast and Slow', 'Daniel Kahneman', '2011', 'New York, AS', 'Buku ini membahas dua cara berpikir manusia, yaitu berpikir cepat (intuitif dan emosional) dan berpikir lambat (logis dan hati-hati). Kahneman menunjukkan bagaimana kedua cara berpikir ini dapat mempengaruhi keputusan dan perilaku manusia.')">Detail</button>
+                </div>
 
-    <!-- Book 2: Sapiens -->
-    <div>
-        <h2>Sapiens: A Brief History of Humankind</h2>
-        <img src="sapiens_brief_history_of_humankind.jpg" alt="Sapiens: A Brief History of Humankind">
-        <button onclick="alert('Penulis: Yuval Noah Harari\nTahun Terbit: 2014\nLokasi Terbit: London, Inggris\nRingkasan: Buku ini mengulas sejarah umat manusia, mulai dari zaman purba hingga era modern, membahas bagaimana Homo sapiens menjadi spesies dominan dan mempengaruhi dunia.')">Detail</button>
-    </div>
+                <!-- Book 2 -->
+                <div class="book-card">
+                    <h2>Sapiens: A Brief History of Humankind</h2>
+                    <img src="file/buku2.jpeg" alt="Sapiens">
+                    <button onclick="showBookDetails('Sapiens', 'Yuval Noah Harari', '2014', 'London, UK', 'Sebuah perjalanan melalui sejarah manusia, dari zaman berburu-mengumpul hingga era digital.')">Detail</button>
+                </div>
 
-    <!-- Book 3: The Power of Habit -->
-    <div>
-        <h2>The Power of Habit: Why We Do What We Do in Life and Business</h2>
-        <img src="the_power_of_habit.jpg" alt="The Power of Habit: Why We Do What We Do in Life and Business">
-        <button onclick="alert('Penulis: Charles Duhigg\nTahun Terbit: 2012\nLokasi Terbit: New York, AS\nRingkasan: Duhigg mengeksplorasi ilmu di balik kebiasaan dan bagaimana mengubah kebiasaan buruk menjadi baik, baik dalam kehidupan pribadi maupun bisnis.')">Detail</button>
-    </div>
+                <!-- Book 3 -->
+                <div class="book-card">
+                    <h2>The Power of Habit</h2>
+                    <img src="file/buku3.png" alt="The Power of Habit">
+                    <button onclick="showBookDetails('The Power of Habit', 'Charles Duhigg', '2012', 'New York, AS', 'Mengungkap bagaimana kebiasaan bekerja dan bagaimana mengubahnya.')">Detail</button>
+                </div>
 
-    <!-- Book 4: Educated -->
-    <div>
-        <h2>Educated</h2>
-        <img src="educated.jpg" alt="Educated">
-        <button onclick="alert('Penulis: Tara Westover\nTahun Terbit: 2018\nLokasi Terbit: New York, AS\nRingkasan: Memoar tentang seorang wanita yang tumbuh di keluarga Mormon konservatif tanpa pendidikan formal dan perjuangannya untuk belajar hingga mendapatkan gelar doktor dari Universitas Cambridge.')">Detail</button>
-    </div>
+                <!-- Book 4 -->
+                <div class="book-card">
+                    <h2>Educated</h2>
+                    <img src="file/buku4.jpeg" alt="Educated">
+                    <button onclick="showBookDetails('Educated', 'Tara Westover', '2018', 'New York, AS', 'Memoir tentang perjalanan pendidikan yang luar biasa.')">Detail</button>
+                </div>
 
-    <!-- Book 5: Atomic Habits -->
-    <div>
-        <h2>Atomic Habits: An Easy & Proven Way to Build Good Habits & Break Bad Ones</h2>
-        <img src="atomic_habits.jpg" alt="Atomic Habits: An Easy & Proven Way to Build Good Habits & Break Bad Ones">
-        <button onclick="alert('Penulis: James Clear\nTahun Terbit: 2018\nLokasi Terbit: New York, AS\nRingkasan: Buku ini membahas cara efektif untuk membangun kebiasaan baik dan menghilangkan kebiasaan buruk melalui langkah-langkah kecil yang konsisten.')">Detail</button>
-    </div>
+                <!-- Book 5 -->
+                <div class="book-card">
+                    <h2>Atomic Habits</h2>
+                    <img src="file/buku5.jpeg" alt="Atomic Habits">
+                    <button onclick="showBookDetails('Atomic Habits', 'James Clear', '2018', 'New York, AS', 'Panduan praktis untuk membangun kebiasaan baik dan menghilangkan kebiasaan buruk.')">Detail</button>
+                </div>
 
-    <!-- Book 6: Grit -->
-    <div>
-        <h2>Grit: The Power of Passion and Perseverance</h2>
-        <img src="grit.jpg" alt="Grit: The Power of Passion and Perseverance">
-        <button onclick="alert('Penulis: Angela Duckworth\nTahun Terbit: 2016\nLokasi Terbit: New York, AS\nRingkasan: Duckworth membahas pentingnya kegigihan (grit) dalam mencapai kesuksesan, lebih dari sekadar bakat atau kecerdasan.')">Detail</button>
-    </div>
+                <!-- Book 6 -->
+                <div class="book-card">
+                    <h2>Grit</h2>
+                    <img src="file/buku6.png" alt="Grit">
+                    <button onclick="showBookDetails('Grit', 'Angela Duckworth', '2016', 'New York, AS', 'Mengapa ketekunan dan semangat lebih penting dari bakat.')">Detail</button>
+                </div>
 
-    <!-- Book 7: Becoming -->
-    <div>
-        <h2>Becoming</h2>
-        <img src="becoming.jpg" alt="Becoming">
-        <button onclick="alert('Penulis: Michelle Obama\nTahun Terbit: 2018\nLokasi Terbit: New York, AS\nRingkasan: Memoar mantan Ibu Negara AS ini mengisahkan perjalanan hidupnya dari masa kecil di Chicago hingga menjadi tokoh penting di dunia politik Amerika.')">Detail</button>
-    </div>
+                <!-- Book 7 -->
+                <div class="book-card">
+                    <h2>Becoming</h2>
+                    <img src="file/buku7.jpeg" alt="Becoming">
+                    <button onclick="showBookDetails('Becoming', 'Michelle Obama', '2018', 'New York, AS', 'Memoir inspiratif dari mantan Ibu Negara Amerika Serikat.')">Detail</button>
+                </div>
 
-    <!-- Book 8: The Subtle Art of Not Giving a F*ck -->
-    <div>
-        <h2>The Subtle Art of Not Giving a F*ck</h2>
-        <img src="the_subtle_art_of_not_giving_a_fuck.jpg" alt="The Subtle Art of Not Giving a F*ck">
-        <button onclick="alert('Penulis: Mark Manson\nTahun Terbit: 2016\nLokasi Terbit: New York, AS\nRingkasan: Buku ini menawarkan pandangan realistis tentang cara hidup, dengan menekankan pentingnya memilih hal-hal yang pantas diperhatikan dalam kehidupan untuk mencapai kebahagiaan dan kesuksesan.')">Detail</button>
-    </div>
+                <!-- Book 8 -->
+                <div class="book-card">
+                    <h2>The Subtle Art of Not Giving a F*ck</h2>
+                    <img src="file/buku8.png" alt="The Subtle Art">
+                    <button onclick="showBookDetails('The Subtle Art of Not Giving a F*ck', 'Mark Manson', '2016', 'New York, AS', 'Pendekatan tidak konvensional untuk hidup yang lebih baik.')">Detail</button>
+                </div>
 
-    <!-- Book 9: Man's Search for Meaning -->
-    <div>
-        <h2>Man's Search for Meaning</h2>
-        <img src="mans_search_for_meaning.jpg" alt="Man's Search for Meaning">
-        <button onclick="alert('Penulis: Viktor E. Frankl\nTahun Terbit: 1946\nLokasi Terbit: Vienna, Austria\nRingkasan: Frankl, seorang psikiater dan penyintas Holocaust, menjelaskan pentingnya menemukan makna hidup, bahkan dalam kondisi yang paling sulit, sebagai kunci kebahagiaan dan kesehatan mental.')">Detail</button>
-    </div>
+                <!-- Book 9 -->
+                <div class="book-card">
+                    <h2>Man's Search for Meaning</h2>
+                    <img src="file/buku9.jpeg" alt="Man's Search for Meaning">
+                    <button onclick="showBookDetails('Mans Search for Meaning', 'Viktor E. Frankl', '1946', 'Vienna, Austria', 'Pengalaman psikiater di kamp konsentrasi Nazi dan pelajaran tentang makna hidup.')">Detail</button>
+                </div>
 
-    <!-- Book 10: Quiet -->
-    <div>
-        <h2>Quiet: The Power of Introverts in a World That Can't Stop Talking</h2>
-        <img src="quiet.jpg" alt="Quiet: The Power of Introverts in a World That Can't Stop Talking">
-        <button onclick="alert('Penulis: Susan Cain\nTahun Terbit: 2012\nLokasi Terbit: New York, AS\nRingkasan: Buku ini membahas kekuatan dan kelebihan introvert dalam masyarakat yang sering kali lebih mengutamakan ekstrovert. Cain menekankan bahwa introvert memiliki kemampuan untuk memimpin dan berprestasi dalam cara mereka sendiri.')">Detail</button>
-    </div>
+                <!-- Book 10 -->
+                <div class="book-card">
+                    <h2>Quiet</h2>
+                    <img src="file/buku10.jpeg" alt="Quiet">
+                    <button onclick="showBookDetails('Quiet', 'Susan Cain', '2012', 'New York, AS', 'Mengungkap kekuatan introvert dalam dunia yang tidak bisa berhenti berbicara.')">Detail</button>
+                </div>
+            </div>
+        </div>
+    </section>
 
+    <section id="form-anggota">
+        <div class="container">
+            <h2>Formulir Pendaftaran Anggota</h2>
+            <div class="form-container">
+                <table class="table">
+                    <tr><th>Nama</th><td><input type="text" class="form-control"></td></tr>
+                    <tr><th>NIM</th><td><input type="text" class="form-control"></td></tr>
+                    <tr><th>Alamat</th><td><input type="text" class="form-control"></td></tr>
+                    <tr><th>Jenis Kelamin</th><td><input type="text" class="form-control"></td></tr>
+                    <tr><th>Email</th><td><input type="email" class="form-control"></td></tr>
+                    <tr><th>Nomor HP</th><td><input type="text" class="form-control"></td></tr>
+                    <tr><th>Tempat Lahir</th><td><input type="text" class="form-control"></td></tr>
+                    <tr><th>Tanggal Lahir</th><td><input type="date" class="form-control"></td></tr>
+                </table>
+                <button class="btn btn-primary">Submit</button>
+            </div>
+        </div>
+    </section>
+
+    <section id="bahan-buku">
+        <div class="container">
+            <h2>Katalog Buku</h2>
+            <div class="table-responsive">
+                <table class="table table-striped table-hover">
+                    <thead class="table-dark">
+                        <tr>
+                            <th scope="col">Nomor</th>
+                            <th scope="col">Judul Buku</th>
+                            <th scope="col">Pengarang</th>
+                            <th scope="col">Penerbit</th>
+                            <th scope="col">Tahun Terbit</th>
+                            <th scope="col">Jumlah Halaman</th>
+                            <th scope="col">ISBN</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <!-- Isi tabel seperti sebelumnya -->
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </section>
+
+    <section id="pemesanan-buku">
+        <div class="container">
+            <h2>Formulir Pemesanan Buku</h2>
+            <div class="form-container">
+                <table class="table">
+                    <tr><th>Nama Lengkap</th><td><input type="text" class="form-control"></td></tr>
+                    <tr><th>Nomor Anggota Perpustakaan</th><td><input type="text" class="form-control"></td></tr>
+                    <tr><th>Email</th><td><input type="email" class="form-control"></td></tr>
+                    <tr><th>Nomor Telepon</th><td><input type="text" class="form-control"></td></tr>
+                    <tr><th>Judul Buku yang Dipesan</th><td><input type="text" class="form-control"></td></tr>
+                    <tr><th>Penulis Buku</th><td><input type="text" class="form-control"></td></tr>
+                    <tr><th>Nomor ISBN</th><td><input type="text" class="form-control"></td></tr>
+                    <tr><th>Tanggal Pemesanan</th><td><input type="date" class="form-control"></td></tr>
+                </table>
+                <button class="btn btn-primary">Pesan</button>
+            </div>
+        </div>
+    </section>
+
+    <section id="perpanjangan-buku">
+        <div class="container">
+            <h2>Formulir Perpanjangan Peminjaman</h2>
+            <div class="form-container">
+                <table class="table">
+                    <tr><th>Nama Lengkap</th><td><input type="text" class="form-control"></td></tr>
+                    <tr><th>Nomor Anggota Perpustakaan</th><td><input type="text" class="form-control"></td></tr>
+                    <tr><th>Email</th><td><input type="email" class="form-control"></td></tr>
+                    <tr><th>Judul Buku</th><td><input type="text" class="form-control"></td></tr>
+                    <tr><th>Penulis Buku</th><td><input type="text" class="form-control"></td></tr>
+                    <tr><th>Nomor ISBN</th><td><input type="text" class="form-control"></td></tr>
+                    <tr><th>Tanggal Peminjaman Buku</th><td><input type="date" class="form-control"></td></tr>
+                    <tr><th>Tanggal Perpanjang</th><td><input type="date" class="form-control"></td></tr>
+                    <tr><th>Alasan Perpanjangan</th><td><textarea class="form-control" rows="3"></textarea></td></tr>
+                </table>
+                <button class="btn btn-primary">Submit</button>
+            </div>
+        </div>
+    </section>
+
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Menutup navbar collapse saat link diklik pada tampilan mobile
+            const navLinks = document.querySelectorAll('.nav-link');
+            const menuToggle = document.getElementById('navbarNav');
+            const bsCollapse = new bootstrap.Collapse(menuToggle, {toggle: false});
+            
+            navLinks.forEach(function(link) {
+                link.addEventListener('click', function() {
+                    if (window.innerWidth < 992) { // Untuk tampilan mobile
+                        bsCollapse.hide();
+                    }
+                    
+                    // Smooth scroll ke section yang dituju
+                    const targetId = this.getAttribute('href');
+                    const targetSection = document.querySelector(targetId);
+                    if (targetSection) {
+                        event.preventDefault();
+                        window.scrollTo({
+                            top: targetSection.offsetTop - 75, // Sesuaikan dengan tinggi navbar
+                            behavior: 'smooth'
+                        });
+                    }
+                });
+            });
+        });
+    </script>
 </body>
 </html>
